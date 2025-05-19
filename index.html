@@ -526,33 +526,57 @@
             });
         });
         
-       contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-
-    fetch('https://formspree.io/f/myyqkqkp', {
-        method: 'POST',
-        body: new URLSearchParams(formData)
-    })
-    .then(response => {
-        if (response.ok) {
-            document.getElementById('modalTitle').textContent = 'Success!';
-            document.getElementById('modalMessage').textContent = 'Your message has been sent successfully. We\'ll get back to you soon.';
-            document.getElementById('successModal').classList.remove('hidden');
-            contactForm.reset();
-        } else {
-            throw new Error('Form submission failed');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('modalTitle').textContent = 'Error';
-        document.getElementById('modalMessage').textContent = 'There was a problem sending your message. Please try again later or call us directly.';
-        document.getElementById('successModal').classList.remove('hidden');
-    });
-});
-
+       // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your server
+            // For this example, we'll simulate a successful submission
+            
+            // Send email using Formspree
+            fetch('https://formspree.io/f/myyqkqkp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    subject: data.subject,
+                    message: data.message,
+                    _replyto: data.email,
+                    _subject: New Contact Form Submission: ${data.subject},
+                    _cc: 'trueclearwindowsco@gmail.com'
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success modal
+                    document.getElementById('modalTitle').textContent = 'Success!';
+                    document.getElementById('modalMessage').textContent = 'Your message has been sent successfully. We\'ll get back to you soon.';
+                    document.getElementById('successModal').classList.remove('hidden');
+                    
+                    // Reset form
+                    contactForm.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('modalTitle').textContent = 'Error';
+                document.getElementById('modalMessage').textContent = 'There was a problem sending your message. Please try again later or call us directly.';
+                document.getElementById('successModal').classList.remove('hidden');
+            });
+        });
+        
         // Quote form submission
         const quoteForm = document.getElementById('quoteForm');
         
