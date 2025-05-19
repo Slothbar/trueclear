@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Clear Windows | Professional Window Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#1E3A8A',
+                        accent: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-window-restore text-blue-800 text-3xl mr-2"></i>
+                        <span class="text-xl font-bold text-blue-800">True Clear Windows</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-blue-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#about" class="text-blue-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">About Us</a>
+                    <a href="#quote" class="text-blue-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Get a Quote</a>
+                    <a href="#contact" class="bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition duration-300">Contact Us</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-blue-800 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-blue-800 hover:text-blue-600 hover:bg-gray-50">Services</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-blue-800 hover:text-blue-600 hover:bg-gray-50">About Us</a>
+                <a href="#quote" class="block px-3 py-2 text-base font-medium text-blue-800 hover:text-blue-600 hover:bg-gray-50">Get a Quote</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-white bg-blue-700 rounded-md hover:bg-blue-800">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center text-white">
+        <div class="max-w-4xl px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Crystal Clear Views for Your Home or Business</h1>
+            <p class="text-xl md:text-2xl mb-8">Professional window cleaning services that leave your windows spotless and streak-free</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#quote" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">Get a Free Quote</a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Professional Services</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer comprehensive window cleaning solutions tailored to your needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 mx-auto">
+                            <i class="fas fa-home text-blue-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-3 text-center">Residential Cleaning</h3>
+                        <p class="text-gray-600 mb-4">Transform your home with our meticulous residential window cleaning service. We handle all types of windows with care and precision.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Single and multi-story homes</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Screens and tracks cleaned</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Eco-friendly cleaning solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 mx-auto">
+                            <i class="fas fa-building text-blue-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-3 text-center">Commercial Cleaning</h3>
+                        <p class="text-gray-600 mb-4">Enhance your business's appearance with our professional commercial window cleaning services. We work around your schedule.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Storefronts and offices</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> High-rise buildings</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Regular maintenance programs</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4 mx-auto">
+                            <i class="fas fa-sun text-blue-800 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-3 text-center">Specialty Services</h3>
+                        <p class="text-gray-600 mb-4">Beyond standard window cleaning, we offer specialized services to meet all your glass maintenance needs.</p>
+                        <ul class="text-gray-600 space-y-2 mb-4">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Pressure washing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Gutter cleaning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Hard water stain removal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Window cleaning professional" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">Why Choose True Clear Windows?</h2>
+                    <p class="text-gray-600 mb-6">At True Clear Windows, we're committed to delivering exceptional window cleaning services with unmatched attention to detail. Our team of trained professionals uses the latest techniques and eco-friendly products to ensure your windows shine.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-800">
+                                    <i class="fas fa-medal text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Quality Guaranteed</h3>
+                                <p class="text-gray-600">We stand behind our work with a 100% satisfaction guarantee. If you're not happy, we'll make it right.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-800">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Fully Insured</h3>
+                                <p class="text-gray-600">Your property is protected with our comprehensive liability insurance coverage.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-800">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Reliable Service</h3>
+                                <p class="text-gray-600">We show up on time and complete the job efficiently, respecting your property and schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Don't just take our word for it - hear from our satisfied clients</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"True Clear Windows did an amazing job on our home. The windows look brand new and the team was professional and efficient. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-medium text-gray-900">Sarah J.</h4>
+                            <p class="text-gray-600 text-sm">Residential Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"We've been using True Clear for our office building for 3 years now. They're always punctual, thorough, and our windows sparkle every time."</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-medium text-gray-900">Michael T.</h4>
+                            <p class="text-gray-600 text-sm">Commercial Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"I was impressed with how they removed years of hard water stains from my windows. The difference is night and day. Worth every penny!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-medium text-gray-900">Lisa M.</h4>
+                            <p class="text-gray-600 text-sm">Residential Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="quote" class="py-16 bg-blue-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Get Your Free Quote Today</h2>
+                <p class="text-lg opacity-90">Complete the form below and we'll provide a customized estimate for your window cleaning needs</p>
+            </div>
+            
+            <form id="quoteForm" class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                        <input type="text" id="name" name="name" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                        <input type="email" id="email" name="email" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed *</label>
+                        <select id="service" name="service" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                            <option value="">Select a service</option>
+                            <option value="residential">Residential Window Cleaning</option>
+                            <option value="commercial">Commercial Window Cleaning</option>
+                            <option value="specialty">Specialty Services</option>
+                            <option value="maintenance">Regular Maintenance Program</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="property" class="block text-sm font-medium text-gray-700 mb-1">Property Type *</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div>
+                                <input type="radio" id="house" name="property" value="house" class="hidden peer" required>
+                                <label for="house" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-50">
+                                    <span>House</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="apartment" name="property" value="apartment" class="hidden peer">
+                                <label for="apartment" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-50">
+                                    <span>Apartment</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="office" name="property" value="office" class="hidden peer">
+                                <label for="office" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-50">
+                                    <span>Office</span>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="radio" id="other" name="property" value="other" class="hidden peer">
+                                <label for="other" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md cursor-pointer peer-checked:border-blue-500 peer-checked:bg-blue-50">
+                                    <span>Other</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
+                        <textarea id="message" name="message" rows="4" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500" placeholder="Number of windows, special requirements, etc."></textarea>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                        Request Free Quote
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Contact True Clear Windows</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Have questions or ready to schedule service? Reach out to us today!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="contact_name" class="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+                            <input type="text" id="contact_name" name="name" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="contact_email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                            <input type="email" id="contact_email" name="email" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="contact_phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="contact_phone" name="phone" class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="contact_subject" class="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
+                            <select id="contact_subject" name="subject" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500">
+                                <option value="">Select a subject</option>
+                                <option value="service">Service Inquiry</option>
+                                <option value="quote">Quote Request</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="contact_message" class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                            <textarea id="contact_message" name="message" rows="5" required class="form-input w-full px-4 py-2 border border-gray-300 rounded-md focus:border-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-4 rounded-md transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-blue-700 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">Serving the local community with professional window cleaning services</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-envelope text-blue-700 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">trueclearwindowsco@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-blue-700 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">(555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-clock text-blue-700 mt-1"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">Service Areas</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Downtown</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Northside</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Southside</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600">East End</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Westside</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Suburbs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-window-restore text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">True Clear Windows</span>
+                    </div>
+                    <p class="text-gray-400">Professional window cleaning services for residential and commercial properties.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Residential Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Commercial Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Specialty Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Maintenance Programs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#quote" class="text-gray-400 hover:text-white transition">Get a Quote</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter for tips and special offers.</p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md text-gray-900 w-full">
+                        <button class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-r-md transition"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 True Clear Windows. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                    <i class="fas fa-check text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2" id="modalTitle">Success!</h3>
+                <p class="text-gray-600 mb-6" id="modalMessage">Your message has been sent successfully. We'll get back to you soon.</p>
+                <button onclick="closeModal()" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your server
+            // For this example, we'll simulate a successful submission
+            
+            // Send email using Formspree
+            fetch('https://formspree.io/f/myyqkqkp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    subject: data.subject,
+                    message: data.message,
+                    _replyto: data.email,
+                    _subject: `New Contact Form Submission: ${data.subject}`,
+                    _cc: 'trueclearwindowsco@gmail.com'
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success modal
+                    document.getElementById('modalTitle').textContent = 'Success!';
+                    document.getElementById('modalMessage').textContent = 'Your message has been sent successfully. We\'ll get back to you soon.';
+                    document.getElementById('successModal').classList.remove('hidden');
+                    
+                    // Reset form
+                    contactForm.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('modalTitle').textContent = 'Error';
+                document.getElementById('modalMessage').textContent = 'There was a problem sending your message. Please try again later or call us directly.';
+                document.getElementById('successModal').classList.remove('hidden');
+            });
+        });
+        
+        // Quote form submission
+        const quoteForm = document.getElementById('quoteForm');
+        
+        quoteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your server
+            // For this example, we'll simulate a successful submission
+            
+            // Send email using Formspree
+            fetch('https://formspree.io/f/myyqkqkp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    phone: data.phone,
+                    service: data.service,
+                    property: data.property,
+                    message: data.message,
+                    _replyto: data.email,
+                    _subject: `New Quote Request: ${data.service}`,
+                    _cc: 'trueclearwindowsco@gmail.com'
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success modal
+                    document.getElementById('modalTitle').textContent = 'Thank You!';
+                    document.getElementById('modalMessage').textContent = 'Your quote request has been received. We\'ll contact you shortly with your estimate.';
+                    document.getElementById('successModal').classList.remove('hidden');
+                    
+                    // Reset form
+                    quoteForm.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('modalTitle').textContent = 'Error';
+                document.getElementById('modalMessage').textContent = 'There was a problem submitting your quote request. Please try again later or call us directly.';
+                document.getElementById('successModal').classList.remove('hidden');
+            });
+        });
+        
+        // Close modal function
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
